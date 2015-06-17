@@ -9,12 +9,17 @@ export default Ember.Route.extend({
         	var i 
            for (i = 0; i < 9; i++) { 
           		var square = this.store.createRecord('square', {
-                	title: i,
-               		isCompleted: false
+                	value: i,
+               		taken: false
            		});
-           		console.log(square)
+           		
             	square.save();
 	    	}
-        }
+        },
+        selectSquare: function(square){
+        	square.set('value', 'x')
+        	square.set('taken', true)
+        	
+        }		
     }
 });
