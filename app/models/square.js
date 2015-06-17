@@ -5,6 +5,20 @@ export default DS.Model.extend({
     isCompleted: DS.attr('boolean')
 }).reopenClass({
     FIXTURES: [
-      
+      {
+            id: 1,
+            title: "Complete Ember.js Tutorial",
+            isCompleted: false
+        },
+        {
+            id: 2,
+            title: "Checkout some more ember stuff",
+            isCompleted: true
+        },
+        {
+            id: 3,
+            title: "Solve world hunger (with Ember)",
+            isCompleted: false
+        }
     ]
 });

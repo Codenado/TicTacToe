@@ -1,4 +1,9 @@
 {{outlet}}
+<div class="board">
+{{#each square in model}}
+	{{square-item square=square}}
+{{/each}}
+</div>
 
 
 <button {{action "newGame"}}>New Game</button>
