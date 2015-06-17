@@ -1,4 +1,9 @@
 import DS from 'ember-data';
 
-export default DS.RESTAdapter.extend({
+export default DS.Model.extend({
+  title: DS.attr('string'),
+  isCompleted: DS.attr('boolean')
+}).reopenClass({
+    FIXTURES: [
+    ]
 });
