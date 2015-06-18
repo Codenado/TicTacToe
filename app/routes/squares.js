@@ -12,7 +12,8 @@ export default Ember.Route.extend({
                 	value: i,
                		taken: false
            		});
-           		
+          		var a = this.store.find('board', 1)
+          		console.log(a)
             	square.save();
 	    	}
         },
@@ -20,6 +21,8 @@ export default Ember.Route.extend({
         	square.set('value', 'x')
         	square.set('taken', true)
         	
-        }		
-    }
+        }
+
+    },
+
 });

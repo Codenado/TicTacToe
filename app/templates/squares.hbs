@@ -1,9 +1,10 @@
 {{outlet}}
 <div class="board">
 {{#each square in model}}
-	{{square-item selectSquare="selectSquare" square=square}}
+	{{square-item selectSquare="selectSquare" square=square board=board}}
 {{/each}}
 </div>
 
+{{test}}
 
 <button {{action "newGame"}}>New Game</button>
